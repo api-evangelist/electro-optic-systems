@@ -1,0 +1,82 @@
+generated: '2026-10-21'
+method: searched
+probe: true
+source: https://eos-aus.com/privacy-policy/
+signals:
+  data_subject_request:
+    url: https://eos-aus.com/privacy-policy/
+    section: '9. Accessing and correcting your personal information'
+    channel: Chief Information Officer (designated EOS Privacy Officer)
+    rights_named: [access, correction, update]
+    escalation: Office of the Australian Information Commissioner (OAIC)
+    evidence:
+    - source: https://eos-aus.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        If access to personal information held by EOS is required (for example to update or correct it), we
+        will provide access to that information in accordance with the Act. Where permitted by the Act, a
+        reasonable fee may apply. To request a correction, update or access to the personal information held
+        by EOS, please contact the Chief Information Officer (designated EOS Privacy Officer).
+    - source: https://eos-aus.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        EOS has an internal privacy complaint management process, which is guided by The Office of the
+        Australian Information Commissioner (OAIC) general guidance for APP entities on establishing
+        appropriate procedures for the handling of privacy complaints.
+    note: >-
+      Access and correction rights under the Australian Privacy Act, routed to the CIO as Privacy Officer, with
+      a possible fee and an OAIC-guided complaint process. No response SLA and no deletion or portability right
+      is stated.
+  data_residency:
+    url: https://eos-aus.com/privacy-policy/
+    section: '5. Storage of personal information'
+    regions: [Australia]
+    evidence:
+    - source: https://eos-aus.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Data that has been uploaded into the Microsoft Azure environment is controlled and cannot leave the
+        Australian sovereign boundaries without the direct authorisation of the EOS Chief Information Officer.
+        EOS Australia does not currently store any information overseas however, if in future EOS Australia
+        elects to transfer personal information to someone in a foreign country, this will be done in
+        accordance with the requirements of the Australian Privacy Principles. It is likely that some of the
+        entities which provide services to EOS store information overseas.
+    note: >-
+      EOS Australia's own data (on-site servers and Microsoft Azure) is kept within Australian sovereign
+      boundaries. The policy itself says its service providers may store information overseas.
+  incident_notification:
+    url: https://eos-aus.com/privacy-policy/
+    section: '11. Reporting of Notifiable Data Breaches'
+    notifies: [affected individuals or corporations, Office of the Australian Information Commissioner]
+    evidence:
+    - source: https://eos-aus.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        EOS has in place a data breach response plan intended to enable EOS to contain, assess and respond to
+        data breaches in a timely manner, to help mitigate potential harm to individuals. Where required by the
+        Act, EOS will notify any affected individuals or corporations, as well as the Office of the Australian
+        Information Commissioner, in respect of notifiable data breaches which occur.
+    note: >-
+      Commits to the Notifiable Data Breaches scheme "where required by the Act". It names no notification
+      window beyond "in a timely manner" for its response.
+  subprocessors:
+    url: https://eos-aus.com/privacy-policy/
+    section: '8. Disclosure of personal information'
+    list_published: false
+    evidence:
+    - source: https://eos-aus.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        to third parties appointed by EOS, including our contractors, website and data hosting providers,
+        technology service providers, accountants, lawyers, and advisers (in which case EOS uses reasonable
+        steps to ensure such third parties keep your personal information confidential) where consent has
+        been provided to use the information in accordance with this policy.
+    note: >-
+      Names the categories of third parties it discloses personal information to (hosting, technology
+      providers, professional advisers). Microsoft Azure is the only provider named, in section 5. There is no
+      published subprocessor list.

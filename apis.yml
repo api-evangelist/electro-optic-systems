@@ -1,23 +1,110 @@
 aid: electro-optic-systems
+
 name: Electro Optic Systems
-description: 'Electro Optic Systems is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Electro Optic Systems (EOS) is an Australian defence and space systems technology company that,
+  per its own site, has designed, manufactured and exported advanced technology systems for more than 40 years.
+  Its product range covers remote weapon systems (R150-R800), high energy laser weapons (Apollo), UAS interceptors
+  and AI-enabled command-and-control for layered counter-drone capability, and ground-based space control capabilities
+  such as optical tracking telescopes, space domain awareness and satellite laser ranging. EOS publishes no public
+  developer API, documentation or developer portal on eos-aus.com. Surfaced via the API Evangelist harvest backlog
+  (source: australia-apidays-2026).'
+
 url: https://raw.githubusercontent.com/api-evangelist/electro-optic-systems/refs/heads/main/apis.yml
+
+image: https://eos-aus.com/wp-content/uploads/2023/11/logo.png
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Defence
+- Aerospace
+- Space
+- Counter-Drone
+- Laser Weapons
+- Remote Weapon Systems
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/electro-optic-systems-hosts.yml
+- type: DomainSecurity
+  url: security/electro-optic-systems-domain-security.yml
 - type: Website
   url: https://eos-aus.com/
+- type: About
+  url: https://eos-aus.com/about-us/
+- type: Newsroom
+  url: https://eos-aus.com/news/
+- type: Events
+  url: https://eos-aus.com/events/
+- type: Support
+  url: https://eos-aus.com/contact-us/
+- type: Careers
+  url: https://eos-aus.com/work-with-us/
+- type: InvestorRelations
+  url: https://eos-aus.com/investor/
+- type: PrivacyPolicy
+  url: https://eos-aus.com/privacy-policy/
+- type: Disclaimer
+  url: https://eos-aus.com/disclaimer/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/electro-optic-systems-pty-limited/
+- type: Twitter
+  url: https://twitter.com/aussie_eos
+- type: YouTube
+  url: https://www.youtube.com/@Electro-Optic-Systems
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website eos-aus.com verified (title "World-leading defence and space systems technology | EOS"); pointers taken from
+    links on the homepage. No developer portal, documentation, API reference, pricing, GitHub or Postman found on the site.
+    /investor/ returned 429 (rate-limited, not dead).
+  evidence:
+  - url: https://eos-aus.com/
+    status: 200
+  - url: https://eos-aus.com/about-us/
+    status: 200
+  - url: https://eos-aus.com/news/
+    status: 200
+  - url: https://eos-aus.com/events/
+    status: 200
+  - url: https://eos-aus.com/contact-us/
+    status: 200
+  - url: https://eos-aus.com/work-with-us/
+    status: 200
+  - url: https://eos-aus.com/investor/
+    status: 429
+  - url: https://eos-aus.com/privacy-policy/
+    status: 200
+  - url: https://eos-aus.com/disclaimer/
+    status: 200
+  - url: https://eos-aus.com/wp-content/uploads/2023/11/logo.png
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

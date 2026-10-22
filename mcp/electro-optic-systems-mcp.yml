@@ -1,0 +1,21 @@
+name: Electro Optic Systems MCP Server
+generated: '2026-10-21'
+method: none
+status: none
+note: >-
+  Checked, nothing there. Electro Optic Systems (eos-aus.com) publishes no MCP server, no public API and
+  no OpenAPI contract, so no candidate tool list can be derived. A web search for an official EOS MCP server
+  returned only unrelated "EOS" projects (Arista EOS eAPI, ETC Eos lighting consoles), which are NOT this company.
+checks:
+  - url: https://eos-aus.com/.well-known/mcp.json
+    status: 404
+  - url: https://eos-aus.com/.well-known/mcp/server-card.json
+    status: 404
+  - url: https://eos-aus.com/llms.txt
+    status: 404
+  - note: preflight contract_discovery on api.eos-aus.com, eos-aus.com, investorhub.eos-aus.com reported mcp absent (2026-10-21)
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
